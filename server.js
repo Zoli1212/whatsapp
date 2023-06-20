@@ -6,6 +6,11 @@ dotenv.config()
 
 const PORT = process.env.PORT || 8000
 
+
+app.post('/test', (req, res) => {
+    res.send(req.body)
+})
+
 app.listen(PORT, function(){
     console.log(`Server running on PORT: ${PORT}`)
 })
